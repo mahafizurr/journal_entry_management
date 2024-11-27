@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Entry</title>
+  </head>
+  <body>
+    <h1>Edit Entry</h1>
+    <form method="post">
+      <label for="title">Title:</label>
+      <input
+        type="text"
+        id="title"
+        name="title"
+        value="{{ entry[1] }}"
+        required
+      />
+      <br />
+      <label for="content">Content:</label>
+      <textarea id="content" name="content" required>{{ entry[2] }}</textarea>
+      <br />
+      <button type="submit">Save Changes</button>
+    </form>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+  </body>
+</html>
